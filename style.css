@@ -1,0 +1,72 @@
+body {
+    background-color: #EEF3F9;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#seccion-2-m{
+    display: flex;
+}
+
+#title-w-m, #title-ms-m {
+    font-size: 0.83333rem;
+    font-family: "Poppins";
+    font-style: regular;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #344050;
+}
+
+
+#market-share-m, #weather-m {
+    width: 423px;
+    height: 146px;
+    background-color: #FFFFFF;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    background-clip: border-box; /*I dunno that tree lines*/
+    border: 0 solid #edf2f9;
+    border-radius: 0.375rem
+}
+
+#market-share-m {
+    margin-right: 8px; /*en la web sale como padding*/
+}
+
+#weather-m {
+    margin-left: 8px; /*en la web sale como padding*/
+}
+#content-ms-m{
+    width: 383px;
+    height: 106px;
+    padding: 20px;
+}
+
+#three-dots-w-m{
+    cursor: pointer;
+    color: #748194;
+    padding: 0.1875rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#three-dots-w-m:hover{ /*parece que tiene el hover como una sombra*/
+    border: 1px solid #E6E7EA;
+    color: #0B1727
+}
+
+#header-w-m{
+    padding: 16px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
