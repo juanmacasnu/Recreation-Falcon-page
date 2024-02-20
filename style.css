@@ -34,15 +34,15 @@ body {
 }
 
 #months-ts-m{
-    padding: 3px 32px 3px 12px;
    /* width: 78px;
     height: 21px;*/
     width: 100%;
-    height: calc(1.5em + 0.625rem + 2px);
+    height: calc(1.5em + 0.625rem + 2px); /*esto sale en la web*/
     color: #344050;
-    margin-left: 8px;
     border: 1px solid #d8e2ef;
-    /*no va background: #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%234d5969' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) no-repeat right 1rem center/8px 10px;*/
+    /*background: #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%234d5969' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) no-repeat right 1rem center/8px 10px;
+    background: #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%234d5969' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) no-repeat right 1rem center/8px 10px;
+*/
     border-radius: 0.25rem;
     padding: 0.3125rem 2rem 0.3125rem 1rem;
     font-size: 1rem;
@@ -50,6 +50,7 @@ body {
     line-height: 1.5;
     vertical-align: middle;
     appearance: none; /*esto quita el simbolo del lateral */
+    margin-right: 8px;
 }
 
  #title-ts-m{
@@ -74,4 +75,21 @@ body {
     background-color: transparent;
     border: 1px solid transparent;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#three-dots-ts-m:hover{ /*parece que tiene el hover como una sombra*/
+    border: 1px solid #E6E7EA;
+    color: #0B1727
+}
+
+#total-sales-chart-m{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 383px;
+        height: 300px;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        padding: 0px;
+        margin: 0px;
+        border-width: 0px;
 }
