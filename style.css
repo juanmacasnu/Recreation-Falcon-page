@@ -5,6 +5,57 @@
 body {
     background-color: #EDF2F9;
 }
+
+/* TOP PRODUCTS GRAPH */
+.headerGraphic{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px -15px;
+    height: 29px;
+    text-align: left;
+}
+
+.linkGraphic{
+    color: #2c7be5;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.dropdownGraphic{
+    background-color: white;
+    display: block;
+    float: left;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.dropdownButtonGraphic{
+    width: 100%;
+    padding: 0.25rem 1rem;
+    background-color: transparent;
+    border: none;
+    clear: both;
+    text-align: left;
+    cursor: pointer;
+}
+
+.removeButtonGraphic{
+    width: 100%;
+    padding: 0.25rem 1rem;
+    color: #e63757;
+    background-color: transparent;
+    border: none;
+    clear: both;
+    text-align: left;
+    cursor: pointer;
+}
+
+.mainGraphic{
+    background-color: #fff;
+}
+/* FOOTER */
 .textsFooter{
     display: flex;
     justify-content: space-between;
