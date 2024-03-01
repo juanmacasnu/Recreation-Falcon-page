@@ -1,4 +1,18 @@
 const chartMarketShareM = document.getElementById('canvas-market-share-m');
+/*const doughnutLabel = { 
+  id: 'doughnutLabel',
+  beforeDatasetsDraw(chart, args,pluginOptions) { 
+  const { ctx, data } = chart;
+  ctx.save();
+  const xCoor = chart.getDatasetMeta(0).data[0].x;
+  const yCoor =chart.getDatasetMeta(0).data[0].y;
+  ctx.font = 'bold 30px sans-serif';
+  ctx.fillStyle ='rgba(54, 162, 235, 1)';
+  ctx.textAlign = 'center'; 
+  ctx.textBaseline = 'middle';
+  ctx.fillText('94M', xCoor, yCoor);
+}
+}*/
 
 new Chart(chartMarketShareM, {
   type: "doughnut",
@@ -9,8 +23,8 @@ new Chart(chartMarketShareM, {
     datasets: [{
       data: [58, 21, 22],
       borderWidth: 0, 
-      cutout: 280, 
-      spacing: 10,
+      cutout: "90%", 
+      spacing: 3,
       backgroundColor: [
         'rgb(44, 123, 229)',
         'rgb(39, 188, 253)',
@@ -36,7 +50,7 @@ new Chart(chartMarketShareM, {
         labelColor: (item) => {
         return {
         borderColor: 'none',
-        backgorundColor: 'white',
+        backgroundColor: 'white',
         borderWidth: 0,
         borderDash: [0],
         borderRadius: 0,
@@ -53,17 +67,24 @@ new Chart(chartMarketShareM, {
 
 
 
+const API_URL_Weather_m  = 'https://www.meteosource.com/api/v1/free/point?lat=40.8N&lon=73.9W&sections=current%2Cdaily&timezone=America%2FNew_York&language=en&units=metric&key=idkbwvbq0d15zfa2g25qex829rhawgiwapizocky';
 
-
-/*const API_URL_Weather_m = "https://www.meteosource.com/api/v1/free/point?lat=40.8N%20&lon=73.9W&sections=current%2Cdaily&timezone=America%2FNew_York&language=en&units=metric&key=idkbwvbq0d15zfa2g25qex829rhawgiwapizocky"
-
-fetch(${API_URL_Weather_m})
-  .then(response => response.json())
-  .then()
-*/
-  /*curl -X 'GET' \
-  'https://www.meteosource.com/api/v1/free/point?lat=40.8N%20&lon=73.9W&sections=current%2Cdaily&timezone=America%2FNew_York&language=en&units=metric&key=idkbwvbq0d15zfa2g25qex829rhawgiwapizocky' \
-  -H 'accept: application/json'*/
-
-  //https://www.meteosource.com/api/v1/free/point?lat=40.8N%20&lon=73.9W&sections=current%2Cdaily&timezone=America%2FNew_York&language=en&units=metric&key=idkbwvbq0d15zfa2g25qex829rhawgiwapizocky    that is the Request URL
-  
+fetch(API_URL_Weather_m )
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json(); // Parse the JSON from the response
+  })
+  .then(data => {
+    console.log("Ha llegado al segundo then")
+    console.log(data.daily.data)
+    document.getElementById('img-weather-m').src = `./weather_icons/set02/medium/${data.daily.data[0].icon}.png`;
+    document.getElementById('meteorology-weather-m').textContent = data.daily.data[0].weather;
+    document.getElementById('precipitation-weather-m').textContent = `Precipitation: ${data.daily.data[0].all_day.precipitation.total} mm`;
+    document.getElementById('current-temperature-weather-m').textContent = `${data.daily.data[0].all_day.temperature}°`; //estp esta leyendo la primera?
+    document.getElementById('general-temperature-weather-m').textContent = `${data.daily.data[0].all_day.temperature_min}° / ${data.daily.data[0].all_day.temperature_max}°`
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
