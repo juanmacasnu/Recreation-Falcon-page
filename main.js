@@ -1,18 +1,19 @@
 const chartMarketShareM = document.getElementById('canvas-market-share-m');
-/*const doughnutLabel = { 
+const doughnutLabel = { 
   id: 'doughnutLabel',
   beforeDatasetsDraw(chart, args,pluginOptions) { 
   const { ctx, data } = chart;
   ctx.save();
   const xCoor = chart.getDatasetMeta(0).data[0].x;
   const yCoor =chart.getDatasetMeta(0).data[0].y;
-  ctx.font = 'bold 30px sans-serif';
-  ctx.fillStyle ='rgba(54, 162, 235, 1)';
+  ctx.font = '300 22px Poppins';
+
+  ctx.fillStyle ='rgba(11, 23, 39)';
   ctx.textAlign = 'center'; 
   ctx.textBaseline = 'middle';
-  ctx.fillText('94M', xCoor, yCoor);
+  ctx.fillText('92M', xCoor, yCoor);
 }
-}*/
+}
 
 new Chart(chartMarketShareM, {
   type: "doughnut",
@@ -63,6 +64,7 @@ new Chart(chartMarketShareM, {
         }
     }
   },
+  plugins: [doughnutLabel],
 });
 
 
@@ -80,9 +82,10 @@ fetch(API_URL_Weather_m )
     console.log("Ha llegado al segundo then")
     console.log(data.daily.data)
     document.getElementById('img-weather-m').src = `./weather_icons/set02/medium/${data.daily.data[0].icon}.png`;
-    document.getElementById('meteorology-weather-m').textContent = data.daily.data[0].weather;
+    let rephase =data.daily.data[0].weather.replace(/_/g, ' '); 
+    document.getElementById('meteorology-weather-m').textContent = rephase.charAt(0).toUpperCase() + rephase.slice(1);
     document.getElementById('precipitation-weather-m').textContent = `Precipitation: ${data.daily.data[0].all_day.precipitation.total} mm`;
-    document.getElementById('current-temperature-weather-m').textContent = `${data.daily.data[0].all_day.temperature}°`; //estp esta leyendo la primera?
+    document.getElementById('current-temperature-weather-m').textContent = `${data.daily.data[0].all_day.temperature}°`;
     document.getElementById('general-temperature-weather-m').textContent = `${data.daily.data[0].all_day.temperature_min}° / ${data.daily.data[0].all_day.temperature_max}°`
   })
   .catch(error => {
