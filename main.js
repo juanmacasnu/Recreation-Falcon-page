@@ -55,20 +55,25 @@ let chartTotalSalesM = new Chart(ctxM, {
       scales: {
         y: {
           border: {
-            dash: [12, 6],
+            dash: [5, 5],
           },
+        type: 'linear', 
+        min: 0, 
+        max: 150,
+          ticks: {
+            stepSize: 30,
+            color: 'rgb(189,199,209)' 
+        },
+        
           grid: {
               display: true,
               color: 'rgb(189,199,209)',
               drawBorder: false,
-              drawOnChartArea: false,
+              drawOnChartArea: true, // No dibujar en el área del gráfico
               drawTicks: false,
-              tickBorderDash: [5], 
+              tickBorderDash: [5],
               tickBorderDashOffset: 4,
-              tickLength: 8,
-              /*borderDash: [3],
-              zeroLineBorderDash: [3],*/
-              zeroLineColor: 'rgba(0,0,0,0)',
+              tickLength: 8, 
           },
       },
       x: {
@@ -84,15 +89,6 @@ let chartTotalSalesM = new Chart(ctxM, {
               color: 'rgb(189,199,209)'  
           },
       },
-          y: {
-              type: 'linear', 
-              min: 0, 
-              max: 150,
-              ticks: {
-                  stepSize: 30,
-                  color: 'rgb(189,199,209)' 
-              }
-          }
       }
   }
   });
