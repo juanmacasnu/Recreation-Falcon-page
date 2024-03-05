@@ -1,26 +1,3 @@
-/*const labels = Utils.months({count: 13}); //esto creo que debo cambiarlo
-const data = {
-  labels: [
-     'Jan 1', '', 'Jan 5', '', 'Jan 9', '', 'Jan 13', '','Jan 17', '', 'Jan 21', '', 'Jan 25'
-   ],
-   //['0', '30', '60', '90', '120', '150']
-  datasets: [{
-   // label: 'My First Dataset',
-    data: [60, 80, 60, 80, 65, 130, 120, 100, 30, 40, 30, 70, 80],
-    fill: true,
-    borderColor: 'rgb(44,123,229)',
-    tension: 0.1,
-    borderWidth: 2,
-    backgroundColor: 'rgb(227,237,251)', 
-    pointBorderColor: 'rgb(44,123,229)',
-    pointBorderWidth: 3,
-    pointHoverBorderWidth: 3,
-    pointRadius: 5,
-    pointHoverRadius: 8,
-    pointBackgroundColor: 'rgb(255,255,255)',
-    pointHoverBackgroundColor: 'rgb(255,255,255)',
-  }]
-};*/
 
 const ctxM = document.getElementById('total-sales-chart-m').getContext('2d');
 
@@ -28,6 +5,26 @@ const ctxM = document.getElementById('total-sales-chart-m').getContext('2d');
 var gradientM = ctxM.createLinearGradient(0, 0, 0, 300);
 gradientM.addColorStop(0, 'rgba(228, 238, 252, 1)');
 gradientM.addColorStop(1, 'rgba(228, 238, 252, 0)'); 
+
+ctxM.canvas.addEventListener("mousemove", (event) => {
+  const mouseX = event.clientX - ctxM.canvas.getBoundingClientRect().left;
+  const xAxis = chartTotalSalesM.scales["x"];
+  const xValue = xAxis.getValueForPixel(mouseX);
+  chartTotalSalesM.options.plugins.annotation.annotations.line1.value = xValue;
+  chartTotalSalesM.update();
+});
+
+ctxM.canvas.addEventListener("mouseover", () => {
+  const line = chartTotalSalesM.options.plugins.annotation.annotations.line1
+  line.display = true
+  chartTotalSalesM.update();
+});
+
+ctxM.canvas.addEventListener("mouseleave", () => {
+  const line = chartTotalSalesM.options.plugins.annotation.annotations.line1
+  line.display = false
+  chartTotalSalesM.update();
+});
 
 let chartTotalSalesM = new Chart(ctxM, {
     type: 'line',
@@ -52,6 +49,63 @@ let chartTotalSalesM = new Chart(ctxM, {
       }]
     },
     options: {
+      responsive: true,
+      plugins: {
+        tooltip: {
+          enabled: true,
+          intersect: false,
+          mode: "index",
+          displayColors: false,
+          callbacks: {
+            label: function () {
+              return "";
+            },
+            title: (tooltipItem) => {
+              console.log(tooltipItem)
+              return `${tooltipItem[0].label}: ${tooltipItem[0].raw}`;
+            },
+          },
+        },
+        legend: {
+          display: false,
+        },
+        annotation: {
+          annotations: {
+            line1: {
+              display: false,
+              type: "line",
+              mode: "x",
+              scaleID: "x",
+              value: "", // Debes establecer el valor de x al hacer hover
+              borderColor: "rgb(189,199,209)",
+              borderWidth: 2,
+              borderDash: [5, 5],
+            },
+          },
+        },
+        tooltip: {
+          backgroundColor: "white",
+          bodyColor: "#010101",
+          callbacks:{
+            labelColor: (item) => {
+            return {
+            borderColor: 'none',
+            backgroundColor: 'white',
+            borderWidth: 0,
+            borderDash: [0],
+            borderRadius: 0,
+                    };
+                  },
+            label: (context) => {
+              return `${context.label}, ${context.parsed}`
+            }
+            }
+            }
+      },
+
+      animation: {
+        duration: 0
+      },
       scales: {
         y: {
           border: {
