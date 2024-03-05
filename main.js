@@ -52,6 +52,22 @@ let chartTotalSalesM = new Chart(ctxM, {
       responsive: true,
       plugins: {
         tooltip: {
+          backgroundColor: "white",
+          bodyColor: "#010101",
+          callbacks:{
+            labelColor: (item) => {
+            return {
+            borderColor: 'none',
+            backgroundColor: 'white',
+            borderWidth: 0,
+            borderDash: [0],
+            borderRadius: 0,
+                    };
+                  },
+            label: (context) => {
+              return `${context[0].label}, ${context[0].parsed}`
+            }
+            },
           enabled: true,
           intersect: false,
           mode: "index",
@@ -62,7 +78,7 @@ let chartTotalSalesM = new Chart(ctxM, {
             },
             title: (tooltipItem) => {
               console.log(tooltipItem)
-              return `${tooltipItem[0].label}: ${tooltipItem[0].raw}`;
+              return `${tooltipItem[0].label}: ${tooltipItem[0].formattedValue}`;
             },
           },
         },
@@ -83,24 +99,6 @@ let chartTotalSalesM = new Chart(ctxM, {
             },
           },
         },
-        tooltip: {
-          backgroundColor: "white",
-          bodyColor: "#010101",
-          callbacks:{
-            labelColor: (item) => {
-            return {
-            borderColor: 'none',
-            backgroundColor: 'white',
-            borderWidth: 0,
-            borderDash: [0],
-            borderRadius: 0,
-                    };
-                  },
-            label: (context) => {
-              return `${context.label}, ${context.parsed}`
-            }
-            }
-            }
       },
 
       animation: {
