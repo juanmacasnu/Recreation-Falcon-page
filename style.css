@@ -42,6 +42,9 @@ html {
     width: 155px;
     height: 29px;
     font-size: 0.875rem;
+    padding: 0.3125rem 2rem 0.3125rem 1rem;
+    appearance: none;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%234d5969' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1rem center/8px 10px;
 }
 
 option {
@@ -203,4 +206,17 @@ circle {
     color: #1657AF;
     cursor: pointer;
     text-decoration: underline;
+}
+
+.RPFooter svg {
+    width: 10px;
+    height: 10px;
+    margin-left: 0.25em;
+    margin-top: 7px;
+    color: #2C7BE5;
+}
+
+.RPFooter:hover svg {
+    color: #1657AF;
+    cursor: pointer;
 }
