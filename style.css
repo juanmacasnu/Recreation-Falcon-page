@@ -4,7 +4,7 @@ html {
 }
 
 .RPBox {
-    width: 593px;
+    width: 692px;
     height: 390px;
     position: relative;
     display: flex;
@@ -27,8 +27,9 @@ html {
 }
 
 .RPTitle {
+    color: #344050;
     font-size: 13.33px;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 3px;
 }
 
@@ -60,9 +61,16 @@ option {
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     cursor: pointer;
-    text-align: start;
+}
+
+.RPSections a {
+    margin-left: 1rem;
+}
+
+.RPSections:hover a {
+    text-decoration: underline;
 }
 
 circle {
@@ -72,7 +80,7 @@ circle {
 	height: 20px;
 	display: flex;
 	justify-content: center;
-    padding: 5%
+    padding: 2%
 }
 
 .circleN {
@@ -102,17 +110,19 @@ circle {
 
 .RPList a {
     color: #4d5969;
+    font-size: .83333rem;
     font-weight: 500;
     text-decoration: none;
 }
 
 .porcent {
     color: #2C7BE5;
-    background-color: #EDF2F9;
+    background-color: #EDF2F5;
     padding: 0.35556em 0.71111em;
     border-radius: 10rem;
-    font-size: 75%;
-    font-weight: 600;
+    font-size: 60%;
+    font-weight: 700;
+    margin-left: 0.75rem;
 }
 
 .timeandbar {
@@ -124,7 +134,7 @@ circle {
 
 .timeandbar p {
     color: #5e6e82;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 13.333px;
     padding-right: 15px;
 }
@@ -134,6 +144,7 @@ circle {
     height: 5px;
     background-color: #EDF2F9;
     display: flex;
+    border-radius: 3px;
 }
 
 .fixbar1 {
@@ -180,10 +191,16 @@ circle {
 }
 
 .RPFooter a {
-    color: #669EEB;
+    color: #2C7BE5;
+    text-decoration: none;
 }
 
 .RPFooter:hover {
-    color: blue;
     cursor: pointer;
+}
+
+.RPFooter:hover a {
+    color: #1657AF;
+    cursor: pointer;
+    text-decoration: underline;
 }
