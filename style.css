@@ -1,0 +1,71 @@
+.text-white {
+    color: #fff!important;
+}
+
+.h1, h1 {
+    margin-bottom: .25rem;
+}
+
+.flex-grow{
+    background-color:#2c7be5 ;
+}
+
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+}
+.svg-inline--fa.fa-w-16 {
+    width: 1em;
+}
+
+.fs-0 {
+    font-size: 1rem;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .375rem;
+    outline: 0;
+}
+
+button, select {
+    text-transform: none;
+}
+
+.modal-header-settings .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    opacity: .75;
+    padding-top: .75rem;
+    margin-top: 0;
+    margin-right: .25rem;
+    outline: 0;
+    font-weight: 300;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+}
