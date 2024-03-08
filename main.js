@@ -54,6 +54,12 @@ let chartTotalSalesM = new Chart(ctxM, {
         tooltip: {
           backgroundColor: "white",
           bodyColor: "#010101",
+          titleColor: "#010101",    
+titleFont: {
+  weight: "200" ,
+  fontFamily: "Poppins",
+},
+
           callbacks:{
             labelColor: (item) => {
             return {
@@ -108,6 +114,8 @@ let chartTotalSalesM = new Chart(ctxM, {
         y: {
           border: {
             dash: [5, 5],
+            display: false,
+            drawBorder: false
           },
         type: 'linear', 
         min: 0, 
@@ -129,7 +137,10 @@ let chartTotalSalesM = new Chart(ctxM, {
           },
       },
       x: {
-        
+        border:{
+          display: false,
+          drawBorder: false
+        },
           ticks: {
               maxRotation: 0,
               minRotation: 0,
