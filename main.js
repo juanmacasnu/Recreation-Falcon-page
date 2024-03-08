@@ -49,6 +49,7 @@ let chartTotalSalesM = new Chart(ctxM, {
       }]
     },
     options: {
+      
       responsive: true,
       plugins: {
         tooltip: {
@@ -112,6 +113,7 @@ titleFont: {
       },
       scales: {
         y: {
+          
           border: {
             dash: [5, 5],
             display: false,
