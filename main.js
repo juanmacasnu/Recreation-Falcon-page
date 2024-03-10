@@ -118,7 +118,22 @@ fetch(API_URL_Weather_m )
     line.display = false
     chartTotalSalesM.update();
   });
-  
+
+  const monthConversion = {
+    Jan: "January",
+    Feb: "February",
+    Mar: "March",
+    Apr: "April",
+    May: "May",
+    Jun: "June",
+    Jul: "July",
+    Aug: "August",
+    Sep: "September",
+    Oct: "October",
+    Nov: "November",
+    Dec: "December",
+  };
+
   let chartTotalSalesM = new Chart(ctxM, {
       type: 'line',
       data: {
@@ -177,9 +192,10 @@ fetch(API_URL_Weather_m )
                 return "";
               },
               title: (tooltipItem) => {
-                console.log(tooltipItem)
-                return `${tooltipItem[0].label}: ${tooltipItem[0].formattedValue}`;
+                const month = chartTotalSalesM.data.labels[0].split(" ")[0];
+                return `${monthConversion[month]}: ${tooltipItem[0].formattedValue}`;
               },
+              
             },
           },
           legend: {
@@ -224,8 +240,7 @@ fetch(API_URL_Weather_m )
                 display: true,
                 color: 'rgb(189,199,209)',
                 drawBorder: false,
-                drawOnChartArea: true, // No dibujar en el área del gráfico
-                drawTicks: false,
+                drawOnChartArea: true,
                 tickBorderDash: [5],
                 tickBorderDashOffset: 4,
                 tickLength: 8, 
