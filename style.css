@@ -30,7 +30,7 @@ cursor: pointer;
 width: 140px;
 display: flex;
 align-content: center;
-margin-left: 90px;
+margin-left: 13rem;
 align-items: start;
 }
 
@@ -51,11 +51,44 @@ align-items: start;
     margin-left: 3rem;
 }
 
-.navRight {
-    display: flex;
+.lupa {
+    position: absolute;
+    overflow: visible;
+    color: #b6c1d2;
+    width: 13.33px;
+    height: 13.33px;
+}
 
+.navRight {
+    margin-left: 48rem;
 }
 
 .navIcons {
     list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navIcons svg {
+    width: 32px;
+    height: 32px;
+}
+
+.imgPerfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+}
+
+.carrito, .campana {
+    color: #6B6D70;
+}
+
+.carrito:hover {
+    color: #171818;
+}
+
+.campana:hover {
+    color: #2C7BE5;
 }
