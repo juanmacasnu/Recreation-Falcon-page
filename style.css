@@ -7,13 +7,21 @@ body {
 }
 
 /* TOP PRODUCTS GRAPH */
+.topProductGraph{
+    height: 385px;
+    width: 862px;
+    position: relative;
+    background-color: #EDF2F9;
+    display: flex;
+    flex-direction: column;
+}
 .headerGraphic{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0px -15px;
     height: 29px;
     text-align: left;
+    padding: 0px 20px;
 }
 
 .linkGraphic{
@@ -35,10 +43,10 @@ body {
     width: 100%;
     padding: 0.25rem 1rem;
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
     clear: both;
     text-align: left;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .removeButtonGraphic{
