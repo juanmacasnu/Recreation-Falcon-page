@@ -1,10 +1,4 @@
-
-(function closeSettings() {
-    ('details').on('mouseover'.function() {
-    (this).attr('open', true);
-    }).on('mouseout', function() {
-    (this).attr('open', false);
-    }).on('click', function(e) {
-    e.preventDefault();
-    })
-    });
+document.getElementById("closesettings").addEventListener("click", function() {
+    const dropdownMenuTopProducts = document.querySelector("#settings")
+    dropdownMenuTopProducts.style.display = (dropdownMenuTopProducts.style.display === "none") ? "block" : "none";
+  })
