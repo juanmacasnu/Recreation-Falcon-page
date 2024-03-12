@@ -5,7 +5,7 @@ document.getElementById("engranaje").addEventListener("click", function() {
 })
 
 
-//Este coódigo abre un div en la barra de búsqueda
+//Este código abre un div en la barra de búsqueda
 (function() {
     ('#searchIcon').click(function() {
         ('#searchLinks').toggle();
