@@ -5,7 +5,7 @@ html {
 
 .navHeader {
 position: sticky;
-width: 100%;
+width: 99%;
 height: 70px;
 top: 0;
 font-size: .83333rem;
@@ -15,6 +15,7 @@ margin-right: -1rem;
 display: flex;
 align-items: center;
 padding: 0.5rem 1rem;
+margin-top: -1rem;
 }
 
 .imgHome img {
@@ -32,7 +33,7 @@ cursor: pointer;
 width: 140px;
 display: flex;
 align-content: center;
-margin-left: 17rem;
+margin-left: 14rem;
 align-items: start;
 }
 
@@ -50,7 +51,7 @@ align-items: start;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #d8e2ef;
-    margin-left: 6rem;
+    margin-left: 7rem;
     margin-top: 1.2rem;
 }
 
@@ -59,12 +60,12 @@ align-items: start;
     color: #b6c1d2;
     width: 13.33px;
     height: 13.33px;
-    left: 7rem;
+    left: 8rem;
     transform: translateY(-25px);
 }
 
 .navRight {
-    margin-left: 48rem;
+    margin-left: 43rem;
 }
 
 .navIcons {
@@ -83,6 +84,7 @@ align-items: start;
     width: 32px;
     height: 32px;
     border-radius: 50px;
+    margin-top: -3px;
 }
 
 .engranaje {
