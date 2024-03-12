@@ -11,26 +11,28 @@
 </head>
 <body>
 
-    <div class="topProductsGraphic">
-        <div class="headerGraphic">
-            <div class="titleGraphic">
-                <h6>Top Products</h6>
+    <div class="topProductsGraph">
+        <div class="headerTopProductsGraph">
+            <div class="titleTopProductsGraph">
+                <h5>Top Products</h5>
             </div>
-            <div class="detailsGraphic">
-                <a class="linkGraphic" href="/dashboard-alt#!">View Details</a>
-            </div>
-            <div class="optionsGraphic">
-                <button type="button" class="optionsButtonGraphic"> ... </button>
-                <div class="dropdownGraphic">
-                    <button type="button" role="menuitem" class="dropdownButtonGraphic">View</button>
-                    <button type="button" role="menuitem" class="dropdownButtonGraphic">Export</button>
-                    <hr style="border: 1px solid #edf2f9;">
-                    <button type="button" role="menuitem" class="removeButtonGraphic">Remove</button>
+            <div id="headerButtonsTopProductsGraph">
+                <div class="detailsTopProductsGraph">
+                    <a class="linkTopProductsGraph" href="/dashboard-alt#!">View Details</a>
+                </div>
+                <div class="optionsTopProductsGraph">
+                    <button type="button" class="optionsButtonTopProducts" id="optionsButtonTopProducts"><b> ... </b></button>
+                    <div class="dropdownMenuTopProducts">
+                        <button type="button" role="menuitem" class="dropdownButtonTopProductsGraph">View</button>
+                        <button type="button" role="menuitem" class="dropdownButtonTopProductsGraph">Export</button>
+                        <hr style="border: 1px solid #edf2f9;">
+                        <button type="button" role="menuitem" class="removeButtonTopProductsGraph">Remove</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="mainGraphic">
-            <canvas id="mainGraphic"></canvas>
+        <div class="mainTopProductsGraph">
+            <canvas id="mainTopProductsGraph"></canvas>
         </div>
     </div>
     <footer class="footer">
@@ -51,59 +53,4 @@
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById("mainGraphic")
-
-    new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ["Boots4", "Reign Pro", "Slick","Falcon", "Sparrow", "Hideaway", "Freya"],
-      datasets: [{
-            label: '2019',
-            data: [43, 83, 86, 72, 80, 50, 80],
-            backgroundColor: ['rgba(44, 123, 229, 1)'],
-            borderRadius: 50,
-        },
-        {
-            label: '2018',
-            data: [85, 73, 62, 53, 50, 70, 90],
-            backgroundColor: ['rgba(216, 226, 239, 1)'],
-            borderRadius: 50,
-        }]
-    },
-    options: {
-        responsive: true,
-        scales: {
-            x: {
-                border: {
-                    display: false,
-                    drawBorder: false
-                },
-                grid: {
-                    display: false
-                }
-            },
-            y: {
-                beginAtZero: true,
-                grid: {
-                    drawBorder: false,
-                    drawOnChartArea: true,
-                    tickBorderDash: [5],
-                    tickBorderDashOffset: 4,
-                    tickLength: 8, 
-                }
-            }
-        },
-        plugins: {
-            legend: {
-                align: 'start',
-                labels : {
-                    boxWidth: 12,
-                    useBorderRadius: true,
-                    borderRadius: 6
-                }
-            }
-        }
-    }
-  });
-</script>
+<script src="main.js"></script>
