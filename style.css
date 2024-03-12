@@ -28,12 +28,14 @@
     position: fixed;
     background-color: black;
     opacity: 0.3;
+    width: 150px;
+    height: 100%;
 }
 
 .settings{
     position: fixed;
     right: 0%;
-    width: 188px;
+    width: 100px;
     height: 69%;
 }
  
@@ -156,13 +158,14 @@ button, select {
     font-weight: 300;
 }
 .close {
+
     float: right;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1;
-    color: #000;
+    color: white;
     text-shadow: 0 1px 0 #fff;
-    opacity: .5;
+    opacity: .4;
 }
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
