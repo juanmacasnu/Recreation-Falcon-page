@@ -38,11 +38,7 @@
 
 
 
-p{
-    margin: 30px;
-    padding: 6%;
 
-}
 
 
 h5,img{
@@ -172,12 +168,7 @@ body {
     text-align: left;
     background-color: rgb(237, 242, 249);
 }
-p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   text-align: center;
-}
+
 .text-center {
     text-align: center !important;
 }

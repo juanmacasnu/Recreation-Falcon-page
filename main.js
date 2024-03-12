@@ -1,4 +1,4 @@
 document.getElementById("closesettings").addEventListener("click", function() {
-    const dropdownMenuTopProducts = document.querySelector("#settings")
-    dropdownMenuTopProducts.style.display = (dropdownMenuTopProducts.style.display === "none") ? "block" : "none";
+    const settings = document.querySelector("#settings")
+    settings.style.display = (settings.style.display === "none") ? "block" : "none";
   })
