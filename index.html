@@ -34,17 +34,5 @@
         </div>
     </nav>
 </body>
-<script>
-    (function() {
-        ('#searchIcon').click(function() {
-            ('#searchLinks').toggle();
-    });
-
-    (document).click(function(e) {
-        if (!(e.target).closest('#searchBox, #searchIcon').length) {
-            ('#searchLinks').hide();
-    }
-    });
-    });
-</script>
 </html>
+<script src="main.js"></script>
