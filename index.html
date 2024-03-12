@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falcon React | ReactJS Dashboard & WebApp Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Seccion 2</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,8 +94,48 @@
         <canvas id="total-sales-chart-m" width="383" height="300"></canvas>
     </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
-    <script src="main.js"></script>
+    <div class="topProductsGraph">
+        <div class="headerTopProductsGraph">
+            <div class="titleTopProductsGraph">
+                <h5>Top Products</h5>
+            </div>
+            <div id="headerButtonsTopProductsGraph">
+                <div class="detailsTopProductsGraph">
+                    <a class="linkTopProductsGraph" href="/dashboard-alt#!">View Details</a>
+                </div>
+                <div class="optionsTopProductsGraph">
+                    <button type="button" class="optionsButtonTopProducts" id="optionsButtonTopProducts"><b> ... </b></button>
+                    <div class="dropdownMenuTopProducts">
+                        <button type="button" role="menuitem" class="dropdownButtonTopProductsGraph">View</button>
+                        <button type="button" role="menuitem" class="dropdownButtonTopProductsGraph">Export</button>
+                        <hr style="border: 1px solid #edf2f9;">
+                        <button type="button" role="menuitem" class="removeButtonTopProductsGraph">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainTopProductsGraph">
+            <canvas id="mainTopProductsGraph"></canvas>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="textsFooter">
+            <div class="greatingsFooter">
+                <p class="textFooter">
+                    Thank you for creatin with Falcon | 2024  © 
+                    <a class="linkFooter" href="https://themewagon.com">Themewagon</a>
+                </p>
+            </div>
+            <div class="versionFooter">
+                <p class="textFooter">
+                    v2.10.2
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+<script src="main.js"></script>
+
