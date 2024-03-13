@@ -9,6 +9,12 @@ body {
     background-color: #EEF3F9;
 }
 
+.generalContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1400px;
+}
+
 #seccion-2-m{
     display: flex;
     font-family: "Poppins";
@@ -437,7 +443,6 @@ html {
 .RPBox {
     width: 692px;
     height: 390px;
-    position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
