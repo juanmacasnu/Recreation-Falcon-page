@@ -11,12 +11,11 @@ body {
 
 .generalContainer {
     display: grid;
+    align-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 1400px;
 }
-/*
-debugging
-*/
+
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
