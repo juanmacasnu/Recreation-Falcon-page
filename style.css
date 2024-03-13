@@ -103,6 +103,7 @@ button {
 
 a {
     background-color: transparent;
+    text-decoration: none;
 }
 
 .iconTextLinkLateral {
@@ -135,6 +136,157 @@ img {
     color: #2c7be5;
 }
 
+.totalUlLateral {
+    display: flex;
+    flex-direction: column!important;
+    width: 100%;
+    font-size: .875rem;
+    font-weight: 500;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.linkListaLateral {
+    display: block;
+    position: relative;
+    color: #5e6e82;
+    text-decoration: none;
+    background-color: transparent;
+    white-space: nowrap;
+    transition: all .2s ease-in-out;
+}
+
+.listaDivLateral {
+    align-items: center!important;
+    display: flex!important;
+}
+
+.spanIconListaLateral {
+    width: 1.5rem;
+    min-width: 1.5rem;
+    font-size: 1rem;
+}
+
+.svgIconLateral {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    width: 1.0625em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+.ulListaLateral {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    flex-flow: column nowrap;
+    font-size: .8125rem;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.linkItemListaLateral {
+    display: block;
+    color: #5e6e82;
+    padding: 0.2rem 1.5rem;
+    text-decoration: none;
+    background-color: transparent;
+    white-space: nowrap;
+    transition: all .2s ease-in-out;
+}
+
+.divLinkTextLateral {
+    display: flex!important;
+    align-items: center!important;
+}
+
+.linkItemListaLateral1 {
+    display: block;
+    position: relative;
+    color: #5e6e82;
+    padding: 0.2rem 1.5rem;
+    text-decoration: none;
+    background-color: transparent;
+    white-space: nowrap;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+.hrDividerLateral {
+    border-color: #d8e2ef;
+    margin-top: 0.5rem!important;
+    margin-bottom: 0.5rem!important;
+}
+
+.spanLinkTextLateral2 {
+    display: inline-block;
+    color: #1c4f93;
+    background-color: #d5e5fa;
+    margin-left: 0.5rem!important;
+    padding-right: 0.71111em;
+    padding-left: 0.71111em;
+    border-radius: 10rem;
+    padding: 0.35556em 0.71111em;
+    font-size: 75%;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.divPurchaseLateral {
+    width: 100%;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    overflow: hidden;
+}
+
+.linkPurchaseLateral {
+    display: block;
+    color: #fff;
+    background-color: #2c7be5;
+    border-color: #2c7be5;
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 0.1875rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem!important;
+    margin-top: 1rem!important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    user-select: none;
+}
+
 @media (min-width: 1200px) {
     .navBarLateralLateral {
         display: block;
@@ -151,5 +303,26 @@ img {
 
     #linesIconLateral {
         display: flex;
+    }
+
+    .bodyUlLateral {
+        display: inline-block!important;
+        position: relative;
+        width: 12.625rem;
+        padding-top: 0.5rem;
+        height: calc(100vh - 4.3125rem);
+        margin-top: -0.3125rem;
+        overflow-y: auto;
+        transition: all .2s ease-in-out;
+    }
+
+    .lineDividerLateral {
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .linkListaLateral {
+        padding: 0.35rem 0;
     }
 }
