@@ -1,4 +1,4 @@
-// Aquí abre en la rueda el 'settings' de la parte de Adriana
+// Aquí, engranaje abre el 'settings' de la parte de Adriana
 $(document).ready(function() {
     $('#settings').click(function() {
     $('#settings').toggleClass('open');
