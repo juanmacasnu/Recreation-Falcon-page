@@ -245,7 +245,270 @@
             <a href="#">Show all projects</a> <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10 ms-1 fs-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
         </div>
     </div>
-    
+    <div class="Storage">
+      <div id="storage-usage">
+        <p>Using Storage <strong>1466 MB</strong> of 2 GB</p>
+        <!--start chart -->
+        <div class="storageChart">
+          <div class="storageBar">
+            <div
+              class="barSection"
+              id="barSectionStart"
+              style="--section-value: 26.7"
+              data-value="26.7%"
+            ></div>
+            <div
+              class="barSection"
+              id="barSectionCenterOne"
+              style="--section-value: 18.9"
+              data-value="18.9%"
+            ></div>
+            <div
+              class="barSection"
+              id="barSectionCenterTwo"
+              style="--section-value: 9.6"
+              data-value="9.6%"
+            ></div>
+            <div
+              class="barSection"
+              id="barSectionEnd"
+              style="--section-value: 28.8"
+              data-value="28.8%"
+            ></div>
+          </div>
+        </div>
+        <div class="storageLabels">
+          <div class="dotStorage" id="dotRegular"></div>
+          <div id="storageLabel1">Regular (895MB)</div>
+          <div class="dotStorage" id="dotSystem"></div>
+          <div id="storageLabel2">System (379MB)</div>
+          <div class="dotStorage" id="dotShared"></div>
+          <div id="storageLabel3">Shared (192MB)</div>
+          <div class="dotStorage" id="dotFree"></div>
+          <div id="storageLabel4">Free (576MB)</div>
+        </div>
+        <!-- end chart-->
+      </div>
+      <!-- storage cards-->
+      <div id="storage-ad">
+        <h2>Running out of your space?</h2>
+        <p>
+          Your storage will be running out soon. Get more space and powerful
+          productivity features.
+        </p>
+        <a id="storage-link" href="https://example.com">
+          <span> upgrade Storage </span>
+          <svg
+            class="svg-inline--fa fa-chevron-right fa-w-10 ml-1"
+            width="15px"
+            height="15px"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="chevron-right"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            data-fa-i2svg=""
+            style="transform-origin: 0.3125em 0.5625em"
+          >
+            <g transform="translate(160 256)">
+              <g
+                transform="translate(0, 32)  scale(0.75, 0.75)  rotate(0 0 0)"
+              >
+                <path
+                  fill="currentColor"
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  transform="translate(-160 -256)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- best selling products-->
+    <div class="bestSellingProductsWithSharedFiles">
+      <div class="bestSellingProducts">
+        <div class="bestSellingHead">
+          <div>
+            <label class="bestSellingColumnOne">Best Selling Products</label>
+            <label class="bestSellingColumnTwo">Revenue ($3189)</label>
+            <label class="bestSellingColumnThree">Revenue (%)</label>
+          </div>
+        </div>
+
+          <div class="bestSellingRow">
+            <div class="thumbnailsPreviewAlign">
+              <img
+                class="productThumbnail"
+                id="productThumbnail1"
+                src="ravenPro.png"
+                width="60"
+                alt=""
+              />
+              <div class="productPreview">
+                <a class="productTitle">RavenPro</a>
+                <span class="productType">Landing</span>
+              </div>
+              <div class="productStatistics">
+                <p class="revenueD">$1311</p>
+                <div class="productBars">
+                  <div class="percentBar"></div>
+                </div>
+              </div>
+              <p class="revenueP">39%</p>
+            </div>
+          </div>
+          <div class="bestSellingRow">
+            <img
+            class="productThumbnail"
+            src="boots4.jpeg"
+            width="60"
+            alt=""
+          />
+          <div class="productPreview">
+            <a class="productTitle">Boots4</a>
+            <span class="productType">Portfolio</span>
+          </div>
+            <div class="productStatistics">
+              <p class="revenueD">$860</p>
+              <div class="productBars">
+                <div class="percentBar"></div>
+              </div>
+              <p class="revenueP">26%</p>
+            </div>
+          </div>
+          <div class="bestSellingRow">
+            <img
+            class="productThumbnail"
+            src="falcon.jpg"
+            width="60"
+            alt=""
+          />
+          <div class="productPreview">
+            <a class="productTitle">Falcon</a>
+            <span class="productType">Admin</span>
+          </div>
+            <p class="revenueD">$539</p>
+            <div class="productBars">
+              <div class="percentBar"></div>
+            </div>
+            <p class="revenueP">16%</p>
+          </div>
+          <div class="bestSellingRow">
+            <img
+            class="productThumbnail"
+            src="slick.jpg"
+            width="60"
+            alt=""
+          />
+          <div class="productPreview">
+            <a class="productTitle">Slick</a>
+            <span class="productType">builder</span>
+          </div>
+            <div class="productStatistics">
+              <p class="revenueD">$343</p>
+              <div class="productBars">
+                <div class="percentBar"></div>
+              </div>
+              <p class="revenueP">10%</p>
+            </div>
+          </div>
+        <div class="bestSellingRow">
+          <img
+          class="productThumbnail"
+          src="reignPro.jpg"
+          width="60"
+          alt=""
+        />
+        <div class="productPreview">
+          <a class="productTitle">Reign Pro</a>
+          <span class="productType">Agency</span>
+        </div>
+          <div class="productStatistics">
+            <p class="revenueD">$280</p>
+            <div class="productBars">
+              <div class="percentBar"></div>
+            </div>
+            <p class="revenueP">08%</p>
+          </div>
+        </div>
+        <div class="bestSellingFooter">
+          <div id="bestSellingTime">
+            <select id="selectDate">
+              <option>Last 7 days</option>
+              <option>Last Month</option>
+              <option>Last Year</option>
+            </select>
+            <a id="bestSellingViewAll" href="https://example.com">
+              View All
+            </a>
+          </div>
+        </div>
+      </div>
+
+    <!-- shared files products-->
+    <div class="SharedFiles">
+      <div class="filesHead">
+        <span>Shared files</span>
+        <a id="sharedFilesView" href="https://example.com"> View All </a>
+      </div>
+      <div class="files">
+        <img
+                class="fileThumbnail"
+                src="apple-smart-watch.png"
+                alt=""
+              />
+        <a href="https://www.example.com" class="filesTitle">apple-smart-watch.png<span class="filesName">Antony<span class="filesDate">Just Now</span>
+          <img class="fileDownload" id="fileDownload1" src="download.svg"><img class="fileEdit" src="edit.svg"></span
+          ></a
+        >
+        
+      </div>
+
+      <div class="files">
+        <img
+                class="fileThumbnail"
+                src="iphone.jpg"
+                alt=""
+              />
+        <a href="https://www.example.com"  class="filesTitle">iphone.jpg<span class="filesName">Antony<span class="filesDate">Yesterday at 1:30 PM</span><img class="fileDownload" id="fileDownload2" src="download.svg"><img class="fileEdit" src="edit.svg"></span
+          ></a
+        >
+      </div>
+
+      <div class="files">
+        <img
+                class="fileThumbnail"
+                src="falcon-v1.8.2.png"
+                alt=""
+              />
+        <a href="https://www.example.com"  class="filesTitle">Falcon v1.8.2<span class="filesName">Jane<span class="filesDate">27 Sep at 10:30 AM</span><img class="fileDownload" id="fileDownload3" src="download.svg"><img class="fileEdit" src="edit.svg"></span
+          ></a
+        >
+      </div>
+
+      <div class="files">
+        <img
+                class="fileThumbnail"
+                src="imac.jpg"
+                alt=""
+              />
+        <a href="https://www.example.com"  class="filesTitle">iMac.jpg<span class="filesName">Rowen<span class="filesDate">23 Sep at 6:10 PM</span><img class="fileDownload" id="fileDownload4" src="download.svg"><img class="fileEdit" src="edit.svg"></span
+          ></a
+        >
+      </div>
+      <div class="files">
+        <img
+                class="fileThumbnail"
+                src="functions.png"
+                alt=""
+              />
+        <a href="https://www.example.com"  class="filesTitle">functions.php<span class="filesName">John<span class="filesDate">1 Oct at 4:30 PM</span><img class="fileDownload" id="fileDownload5" src="download.svg"><img class="fileEdit" src="edit.svg"></span
+          ></a
+        >
+      </div>
     <div class="topProductsGraph"> <!--Empieza la parte de JAVI-->
         <div class="headerTopProductsGraph">
             <div class="titleTopProductsGraph">
