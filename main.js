@@ -1,9 +1,9 @@
 // Aquí abre en la rueda el 'settings' de la parte de Adriana
-document.getElementById("engranaje").addEventListener("click", function() {
-    const openSettings = document.querySelector("settings")
-    openSettings.style.display = (openSettings.style.display === "none") ? "block" : "none";
-})
-
+$(document).ready(function() {
+    $('#settings').click(function() {
+    $('#settings').toggleClass('open');
+    });
+});
 
 //Este código abre un div en la barra de búsqueda
 (function() {
@@ -11,12 +11,14 @@ document.getElementById("engranaje").addEventListener("click", function() {
         ('#searchLinks').toggle();
 });
 
-(document).click(function(e) {
+
+//AQUÍ EMPIEZA JS DE ADRIANA
+(document).click(function(e) { //Esto cierra el 'settings' de  Adriana cuando se hace click en el botón de cerrar.
     if (!(e.target).closest('#searchBox, #searchIcon').length) {
         ('#searchLinks').hide();
 }
 });
 });document.getElementById("closesettings").addEventListener("click", function() {
-    const settings = document.querySelector("#settings")
+    const settings = document.querySelector("#settings");
     settings.style.display = (settings.style.display === "none") ? "block" : "none";
-  })
+})
