@@ -14,6 +14,24 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 1400px;
 }
+/*
+debugging
+*/
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1400px;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.wrapOne{
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+.wrapTwo{
+    grid-column: 4 / 4;
+    grid-row: 1;
+}
 
 #seccion-2-m{
     display: flex;
